@@ -1,0 +1,79 @@
+
+
+PyQt5
+------------------------------------------
+PythonQtError: The Qt3DAnimation module was not found. It needs to be installed separately for PyQt5.
+PythonQtError: The Qt3DCore module was not found. It needs to be installed separately for PyQt5.
+PythonQtError: The Qt3DExtras module was not found. It needs to be installed separately for PyQt5.
+PythonQtError: The Qt3DInput module was not found. It needs to be installed separately for PyQt5.
+PythonQtError: The Qt3DLogic module was not found. It needs to be installed separately for PyQt5.
+PythonQtError: The Qt3DRender module was not found. It needs to be installed separately for PyQt5.
+PythonQtError: QtAxContainer not implemented in PyQt5
+PythonQtError: The QtChart module was not found. It needs to be installed separately for PyQt5.
+PythonQtError: QtConcurrent not implemented in PyQt5
+PythonQtError: QtDBus does not exist on this operating system
+PythonQtError: The QtDataVisualization module was not found. It needs to be installed separately for PyQt5.
+PythonQtError: The QtNetworkAuth module was not found. It needs to be installed separately for PyQt5.
+PythonQtError: QtTextToSpeech not implemented in PyQt5
+PythonQtError: QtQuickControls2 not implemented in PyQt5
+PythonQtError: QtScxml not implemented in PyQt5
+PythonQtError: QtStateMachine not implemented in PyQt5
+PythonQtError: QtSvgWidgets not implemented in PyQt5
+PythonQtError: QtUiTools not implemented in PyQt5
+PythonQtError: The QtWebEngine module was not found. It needs to be installed separately for PyQt5.
+PythonQtError: The QtWebEngineCore module was not found. It needs to be installed separately for PyQt5.
+PythonQtError: QtWebEngineQuick not implemented in PyQt5
+PythonQtError: The QtWebEngineWidgets module was not found. It needs to be installed separately for PyQt5.
+------------------------------------------
+
+PyQt6
+------------------------------------------
+PythonQtError: The Qt3DAnimation module was not found. It needs to be installed separately for PyQt6.
+PythonQtError: The Qt3DCore module was not found. It needs to be installed separately for PyQt6.
+PythonQtError: The Qt3DExtras module was not found. It needs to be installed separately for PyQt6.
+PythonQtError: The Qt3DInput module was not found. It needs to be installed separately for PyQt6.
+PythonQtError: The Qt3DLogic module was not found. It needs to be installed separately for PyQt6.
+PythonQtError: The Qt3DRender module was not found. It needs to be installed separately for PyQt6.
+PythonQtError: QtAxContainer not implemented in PyQt6
+PythonQtError: The QtCharts module was not found. It needs to be installed separately for PyQt6.
+PythonQtError: QtConcurrent not implemented in PyQt6
+PythonQtError: QtDBus does not exist on this operating system
+PythonQtError: The QtDataVisualization module was not found. It needs to be installed separately for PyQt6.
+PythonQtError: QtLocation not implemented in PyQt6
+PythonQtError: The QtNetworkAuth module was not found. It needs to be installed separately for PyQt6.
+PythonQtError: QtQuickControls2 not implemented in PyQt6
+PythonQtError: QtScxml not implemented in PyQt6
+PythonQtError: QtStateMachine not implemented in PyQt6
+PythonQtError: QtTextToSpeech not implemented in PyQt6
+PythonQtError: QtUiTools not implemented in PyQt6
+PythonQtError: QtWebEngine does not exist in Qt6
+PythonQtError: The QtWebEngineCore module was not found. It needs to be installed separately for PyQt6.
+PythonQtError: The QtWebEngineQuick module was not found. It needs to be installed separately for PyQt6.
+PythonQtError: The QtWebEngineWidgets module was not found. It needs to be installed separately for PyQt6.
+PythonQtError: QtWinExtras does not exist in Qt6
+PythonQtError: QtXmlPatterns does not exist in Qt6
+------------------------------------------
+
+PySide2
+------------------------------------------
+PythonQtError: QtBluetooth not implemented in PySide2
+PythonQtError: QtDBus does not exist on this operating system
+PythonQtError: QtDesigner not implemented in PySide2
+PythonQtError: QtNetworkAuth not implemented in PySide2
+PythonQtError: QtNfc not implemented in PySide2
+PythonQtError: QtTextToSpeech not implemented in PySide2
+PythonQtError: QtQuick3D not implemented in PySide2
+PythonQtError: QtStateMachine not implemented in PySide2
+PythonQtError: QtSvgWidgets not implemented in PySide2
+PythonQtError: QtWebEngineQuick not implemented in PySide2
+------------------------------------------
+
+PySide6
+------------------------------------------
+PythonQtError: QtDBus does not exist on this operating system
+PythonQtError: QtLocation not implemented in PySide6
+PythonQtError: QtTextToSpeech not implemented in PySide6
+PythonQtError: QtWebEngine does not exist in Qt6
+PythonQtError: QtWinExtras does not exist in Qt6
+PythonQtError: QtXmlPatterns does not exist in Qt6
+------------------------------------------
