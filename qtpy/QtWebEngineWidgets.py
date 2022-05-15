@@ -11,10 +11,8 @@ Provides QtWebEngineWidgets classes and functions.
 
 from . import PYQT5, PYQT6, PYSIDE2, PYSIDE6, PythonQtError
 
-
 # To test if we are using WebEngine or WebKit
 WEBENGINE = True
-
 
 if PYQT5:
     try:
@@ -30,12 +28,17 @@ if PYQT5:
         from PyQt5.QtWebKit import QWebSettings as QWebEngineSettings
         WEBENGINE = False
 elif PYQT6:
-    from PyQt6.QtWebEngineWidgets import *
-    from PyQt6.QtWebEngineCore import QWebEnginePage
-    from PyQt6.QtWebEngineCore import QWebEngineSettings
-    from PyQt6.QtWebEngineCore import QWebEngineProfile
-    from PyQt6.QtWebEngineCore import QWebEngineScript
-
+    try:
+        from PyQt6.QtWebEngineWidgets import *
+        from PyQt6.QtWebEngineCore import QWebEnginePage
+        from PyQt6.QtWebEngineCore import QWebEngineSettings
+        from PyQt6.QtWebEngineCore import QWebEngineProfile
+        from PyQt6.QtWebEngineCore import QWebEngineScript
+    except ImportError as error:
+        raise PythonQtError(
+            'The QtWebEngineWidgets module was not found. '
+            'It needs to be installed separately for PyQt6.'
+            ) from error
 elif PYSIDE6:
     from PySide6.QtWebEngineWidgets import *
     from PySide6.QtWebEngineCore import QWebEnginePage
