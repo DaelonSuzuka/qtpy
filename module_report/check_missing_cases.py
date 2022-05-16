@@ -1,14 +1,10 @@
 from pathlib import Path
 
+import qtpy
+
 
 def check_missing_cases():
-    imports = [
-        'PYQT5:',
-        'PYQT6:',
-        'PYSIDE2:',
-        'PYSIDE6:',
-    ]
-
+    imports = [f'{api_name.upper()}:' for api_name in qtpy.API_NAMES]
 
     files = Path('qtpy').glob('*.py')
 
@@ -16,13 +12,9 @@ def check_missing_cases():
 
     for file_name in files:
         if file_name.name.startswith('Qt'):
-            with open(file_name) as f:
-                text = f.read()
-                _imports = []
-                for i in imports:
-                    if i in text:
-                        _imports.append(i)
-                lines.append(f'{file_name.as_posix().ljust(30)} {_imports}')
+            text = file_name.read_text(encoding='UTF-8')
+            _imports = [_import for _import in imports if _import in text]
+            lines.append(f'{file_name.as_posix().ljust(30)} {_imports}')
 
-    with open('module_report/missing_cases.txt', 'w') as f:
+    with open('module_report/missing_cases.txt', 'w', encoding='UTF-8') as f:
         f.write('\n'.join(lines))

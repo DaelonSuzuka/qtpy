@@ -1,7 +1,8 @@
-from .check_modules import *
-from .check_missing_cases import *
-from .check_apis import *
 import sys
+from pathlib import Path
+
+from .check_apis import check_apis
+from .check_missing_cases import check_missing_cases
 
 
 if __name__ == '__main__':
@@ -13,7 +14,6 @@ if __name__ == '__main__':
     check_missing_cases()
 
     # reset the import_report file
-    with open(f'module_report/{report_name}', 'w') as f:
-        f.write('')
+    Path('module_report', report_name).unlink(missing_ok=True)
 
     check_apis(report_name)

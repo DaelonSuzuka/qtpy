@@ -1,15 +1,12 @@
 import os
+import sys
 import subprocess
 
+import qtpy
 
-def check_apis(report_name):
-    apis = [
-        'pyqt5',
-        'pyqt6',
-        'pyside2',
-        'pyside6',
-    ]
 
-    for api in apis:
-        os.environ['QT_API'] = api
-        subprocess.call(f"python module_report/check_api.py {report_name}", shell=True)
+for api in qtpy.API_NAMES:
+        child_env = dict(os.environ).update({'QT_API': api})
+        subprocess.run(
+            [sys.executable, Path(__file__).parent / 'check_api.py', report_name],
+            check=True, env=child_env)

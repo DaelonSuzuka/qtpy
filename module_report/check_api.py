@@ -1,7 +1,9 @@
 import importlib
-from check_modules import *
-import qtpy
 import sys
+
+import qtpy
+
+from check_modules import QT_MODULE_NAMES
 
 
 report_name = 'import_report.txt'
@@ -11,14 +13,14 @@ if len(sys.argv) == 2:
 
 lines = ['', '']
 lines.append(qtpy.API_NAME)
-lines.append('------------------------------------------')
-for m in module_names:
+lines.append('-' * 50)
+for module_name in module_names:
     try:
-        mod = importlib.import_module(f'qtpy.{m}')
+        mod = importlib.import_module(f'qtpy.{module_name}')
     except Exception as e:
-        lines.append(f'{e.__class__.__name__}: {e}')
+        lines.append(f'{type(e).__name__}: {e}')
 
-lines.append('------------------------------------------')
+lines.append('-' * 50)
 
-with open(f'module_report/{report_name}', 'a') as f:
+with open(f'module_report/{report_name}', 'a', encoding='UTF-8') as f:
     f.write('\n'.join(lines))

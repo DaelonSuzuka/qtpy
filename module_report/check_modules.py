@@ -1,32 +1,16 @@
-import importlib
 from pathlib import Path
-import platform
-import subprocess
+import pkgutil
+
+import qtpy
 
 
-lib_path = Path([*Path('.venv').rglob('site-packages')][0])
-libs = ['PyQt5', 'PyQt6', 'PySide2', 'PySide6']
-qtpy_files = [f.name[:-len('.py')] for f in Path('qtpy').glob('*.py') if f.name.startswith('Qt')]
+QTPY_MODULES = [module.name for module in pkgutil.iter_modules(qtpy.__path__)
+                if module.name.startswith(Qt)]
 
 
-modules = {}
+QT_MODULES = {}
 
-
-for lib in libs:
-    path = lib_path / lib
-    files = path.glob('*.pyi')
-    for f in files:
-        if f.name.startswith('Qt'):
-            name = f.name[:-len('.pyi')]
-            if name not in modules:
-                modules[name] = {'libs':[], 'missing': name not in qtpy_files}
-            modules[name]['libs'].append(lib)
-
-
-module_names = sorted(modules.keys())
-
-
-false_positives = [
+FALSE_POSITIVES = [
     'QtChart',
     'QtOpenGLFunctions',
     'QtScript',
@@ -34,20 +18,29 @@ false_positives = [
 ]
 
 
-for name in false_positives:
-    if name in module_names:
-        module_names.remove(name)
-    if name in modules:
-        modules.pop(name)
+for api_name in qtpy.API_NAMES.values():
+    try:
+        api_path = pkgutil.resolve_name(api_name).__path__
+    except ImportError:
+        continue
+    api_modules = [mod.name for mod in pkgutil.iter_modules(api_path)]
+    api_modules =  [mod for mod in api_modules if mod.name.startswith('Qt')]
+    for module in api_modules:
+        if module not in QT_MODULES and module not in FALSE_POSITIVES:
+            modules[module] = {'apis':[], 'missing': name not in QTPY_MODULES}
+        modules[api_module]['apis'].append(module)
+
+
+QT_MODULE_NAMES = sorted(modules.keys())
 
 
 def write_module_report():
-    report = []
-    for m in module_names:
-        name = m
-        if modules[m]['missing']:
+    report_lines = []
+    for module in module_names:
+        name = module
+        if modules[module]['missing']:
             name += '*'
-        report.append(f"{name.ljust(20)}{modules[m]['libs']}")
+        report.append(f'{name.ljust(20)}{modules[module]["apis"]}')`
 
-    with open('module_report/module_report.txt', 'w') as f:
-        f.write('\n'.join(report))
+    with open('module_report/module_report.txt', 'w', encoding='UTF-8') as f:
+        f.write('\n'.join(report_lines))
