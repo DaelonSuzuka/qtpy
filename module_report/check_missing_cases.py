@@ -4,7 +4,7 @@ import qtpy
 
 
 def check_missing_cases():
-    imports = [f'{api_name.upper()}:' for api_name in qtpy.API_NAMES]
+    imports = [f'{api_name.upper()}:' for api_name in sorted(qtpy.API_NAMES)]
 
     files = Path('qtpy').glob('*.py')
 

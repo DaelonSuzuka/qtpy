@@ -3,6 +3,7 @@ from pathlib import Path
 
 from .check_apis import check_apis
 from .check_missing_cases import check_missing_cases
+# from .check_modules import write_module_report
 
 
 if __name__ == '__main__':

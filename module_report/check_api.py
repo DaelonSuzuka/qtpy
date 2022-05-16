@@ -14,7 +14,7 @@ if len(sys.argv) == 2:
 lines = ['', '']
 lines.append(qtpy.API_NAME)
 lines.append('-' * 50)
-for module_name in module_names:
+for module_name in QT_MODULE_NAMES:
     try:
         mod = importlib.import_module(f'qtpy.{module_name}')
     except Exception as e:
