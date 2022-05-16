@@ -2,54 +2,54 @@
 
 PyQt5
 ------------------------------------------
-PythonQtError: The Qt3DAnimation module was not found. It needs to be installed separately for PyQt5.
-PythonQtError: The Qt3DCore module was not found. It needs to be installed separately for PyQt5.
-PythonQtError: The Qt3DExtras module was not found. It needs to be installed separately for PyQt5.
-PythonQtError: The Qt3DInput module was not found. It needs to be installed separately for PyQt5.
-PythonQtError: The Qt3DLogic module was not found. It needs to be installed separately for PyQt5.
-PythonQtError: The Qt3DRender module was not found. It needs to be installed separately for PyQt5.
+QtModuleNotInstalledError: The Qt3DAnimation module was not found for PyQt5. It must be installed separately as PyQt3D.
+QtModuleNotInstalledError: The Qt3DCore module was not found for PyQt5. It must be installed separately as PyQt3D.
+QtModuleNotInstalledError: The Qt3DExtras module was not found for PyQt5. It must be installed separately as PyQt3D.
+QtModuleNotInstalledError: The Qt3DInput module was not found for PyQt5. It must be installed separately as PyQt3D.
+QtModuleNotInstalledError: The Qt3DLogic module was not found for PyQt5. It must be installed separately as PyQt3D.
+QtModuleNotInstalledError: The Qt3DRender module was not found for PyQt5. It must be installed separately as PyQt3D.
 PythonQtError: QtAxContainer not implemented in PyQt5
-PythonQtError: The QtChart module was not found. It needs to be installed separately for PyQt5.
+QtModuleNotInstalledError: The Qt3DCharts module was not found for PyQt5. It must be installed separately as PyQtChart.
 PythonQtError: QtConcurrent not implemented in PyQt5
 PythonQtError: QtDBus does not exist on this operating system
-PythonQtError: The QtDataVisualization module was not found. It needs to be installed separately for PyQt5.
-PythonQtError: The QtNetworkAuth module was not found. It needs to be installed separately for PyQt5.
+QtModuleNotInstalledError: The QtDataVisualization module was not found for PyQt5. It must be installed separately as PyQtDataVisualization.
+QtModuleNotInstalledError: The QtNetworkAuth module was not found for PyQt5. It must be installed separately as PyQtNetworkAuth.
 PythonQtError: QtTextToSpeech not implemented in PyQt5
 PythonQtError: QtQuickControls2 not implemented in PyQt5
 PythonQtError: QtScxml not implemented in PyQt5
 PythonQtError: QtStateMachine not implemented in PyQt5
 PythonQtError: QtSvgWidgets not implemented in PyQt5
 PythonQtError: QtUiTools not implemented in PyQt5
-PythonQtError: The QtWebEngine module was not found. It needs to be installed separately for PyQt5.
-PythonQtError: The QtWebEngineCore module was not found. It needs to be installed separately for PyQt5.
+QtModuleNotInstalledError: The QtWebEngine module was not found for PyQt5. It must be installed separately as PyQtWebEngine.
+QtModuleNotInstalledError: The QtWebEngineCore module was not found for PyQt5. It must be installed separately as PyQtWebEngine.
 PythonQtError: QtWebEngineQuick not implemented in PyQt5
-PythonQtError: The QtWebEngineWidgets module was not found. It needs to be installed separately for PyQt5.
+QtModuleNotInstalledError: The QtWebEngineWidgets module was not found for PyQt5. It must be installed separately as PyQtWebEngine.
 ------------------------------------------
 
 PyQt6
 ------------------------------------------
-PythonQtError: The Qt3DAnimation module was not found. It needs to be installed separately for PyQt6.
-PythonQtError: The Qt3DCore module was not found. It needs to be installed separately for PyQt6.
-PythonQtError: The Qt3DExtras module was not found. It needs to be installed separately for PyQt6.
-PythonQtError: The Qt3DInput module was not found. It needs to be installed separately for PyQt6.
-PythonQtError: The Qt3DLogic module was not found. It needs to be installed separately for PyQt6.
-PythonQtError: The Qt3DRender module was not found. It needs to be installed separately for PyQt6.
+QtModuleNotInstalledError: The Qt3DAnimation module was not found for PyQt6. It must be installed separately as PyQt6-3D.
+QtModuleNotInstalledError: The Qt3DCore module was not found for PyQt6. It must be installed separately as PyQt6-3D.
+QtModuleNotInstalledError: The Qt3DExtras module was not found for PyQt6. It must be installed separately as PyQt6-3D.
+QtModuleNotInstalledError: The Qt3DInput module was not found for PyQt6. It must be installed separately as PyQt6-3D.
+QtModuleNotInstalledError: The Qt3DLogic module was not found for PyQt6. It must be installed separately as PyQt6-3D.
+QtModuleNotInstalledError: The Qt3DRender module was not found for PyQt6. It must be installed separately as PyQt6-3D.
 PythonQtError: QtAxContainer not implemented in PyQt6
-PythonQtError: The QtCharts module was not found. It needs to be installed separately for PyQt6.
+QtModuleNotInstalledError: The Qt3DCharts module was not found for PyQt6. It must be installed separately as PyQt6-Charts.
 PythonQtError: QtConcurrent not implemented in PyQt6
 PythonQtError: QtDBus does not exist on this operating system
-PythonQtError: The QtDataVisualization module was not found. It needs to be installed separately for PyQt6.
+QtModuleNotInstalledError: The QtDataVisualization module was not found for PyQt6. It must be installed separately as PyQt6-DataVisualization.
 PythonQtError: QtLocation not implemented in PyQt6
-PythonQtError: The QtNetworkAuth module was not found. It needs to be installed separately for PyQt6.
+QtModuleNotInstalledError: The QtNetworkAuth module was not found for PyQt6. It must be installed separately as PyQt6-NetworkAuth.
 PythonQtError: QtQuickControls2 not implemented in PyQt6
 PythonQtError: QtScxml not implemented in PyQt6
 PythonQtError: QtStateMachine not implemented in PyQt6
 PythonQtError: QtTextToSpeech not implemented in PyQt6
 PythonQtError: QtUiTools not implemented in PyQt6
 PythonQtError: QtWebEngine does not exist in Qt6
-PythonQtError: The QtWebEngineCore module was not found. It needs to be installed separately for PyQt6.
+QtModuleNotInstalledError: The QtWebEngineCore module was not found for PyQt6. It must be installed separately as PyQt6-WebEngine.
 PythonQtError: The QtWebEngineQuick module was not found. It needs to be installed separately for PyQt6.
-PythonQtError: The QtWebEngineWidgets module was not found. It needs to be installed separately for PyQt6.
+QtModuleNotInstalledError: The QtWebEngineWidgets module was not found for PyQt6. It must be installed separately as PyQt6-WebEngine.
 PythonQtError: QtWinExtras does not exist in Qt6
 PythonQtError: QtXmlPatterns does not exist in Qt6
 ------------------------------------------
